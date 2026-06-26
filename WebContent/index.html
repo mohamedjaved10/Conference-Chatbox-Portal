@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Conference Chatbox</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .hero {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            color: var(--text-muted);
+            margin-top: 1rem;
+            line-height: 1.6;
+            font-size: 1.15rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(59, 130, 246, 0.5);
+        }
+        .feature-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+        .feature-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+        .action-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--secondary);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-outline:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -10px rgba(139, 92, 246, 0.5);
+        }
+        .landing-container {
+            max-width: 900px;
+            padding: 3rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container landing-container">
+        <div class="hero">
+            <h1>Conference Chatbox</h1>
+            <p>A next-generation interactive classroom platform. Engage students with real-time anonymous Q&A, dynamic live polling, and secure session management.</p>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>Anonymous Q&A</h3>
+                <p>Allow students to ask questions freely without the fear of judgement in front of their peers.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Live Polling</h3>
+                <p>Test knowledge instantly with real-time votes and dynamic percentage reveal animations.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Secure Rooms</h3>
+                <p>Generate one-time passcodes and lock rooms instantly to maintain full control over the session.</p>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <button onclick="window.location.href='register.html'" class="btn btn-primary" style="width: auto; padding: 1rem 2.5rem; font-size: 1.1rem;">Student Login</button>
+            <button onclick="window.location.href='admin.html'" class="btn btn-outline" style="width: auto; padding: 1rem 2.5rem; font-size: 1.1rem;">Admin Login</button>
+        </div>
+    </div>
+</body>
+</html>
