@@ -1,14 +1,12 @@
-# Use the official Apache Tomcat 9 image with Java 17 (perfectly matching your local setup)
+# Use the official Apache Tomcat 9 image with Java 17
 FROM tomcat:9.0-jdk17-corretto
 
 # Create the exact same directory structure you use locally
-RUN mkdir -p /usr/local/tomcat/webapps/conference_chatbox/WEB-INF/classes
+RUN mkdir -p /usr/local/tomcat/webapps/conference_chatbox
 
-# Copy all your HTML, CSS, and JS files into the server
+# Copy all your HTML, CSS, JS, and compiled Java class files into the server
+# (Because your compile.bat puts the .class files inside WebContent/WEB-INF/classes, this single line copies everything!)
 COPY WebContent/ /usr/local/tomcat/webapps/conference_chatbox/
-
-# Copy all your compiled Java backend logic into the server
-COPY build/classes/ /usr/local/tomcat/webapps/conference_chatbox/WEB-INF/classes/
 
 # Expose port 8080 so the internet can access it
 EXPOSE 8080
